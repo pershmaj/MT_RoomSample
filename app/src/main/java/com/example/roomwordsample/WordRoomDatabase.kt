@@ -23,11 +23,11 @@ abstract class WordRoomDatabase : RoomDatabase() {
                 scope.launch {
                     var wordDao = database.wordDao()
                     wordDao.deleteAll()
-                    var word = Word(1, "Hello")
+                    var word = Word("Hello")
                     wordDao.insert(word)
-                    word = Word(2, "World!")
+                    word = Word("World!")
                     wordDao.insert(word)
-                    word = Word(3, "TODO!")
+                    word = Word("TODO!")
                     wordDao.insert(word)
                 }
             }
